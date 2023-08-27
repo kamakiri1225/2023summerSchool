@@ -1,0 +1,53 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+//初期値 k = 3/2*(IU)^2 = 1.5∗(0.05∗1.0)^2=0.00375 (I=0.05 : 5%)
+internalField   uniform 0.00375;
+
+boundaryField
+{
+   inlet
+    {
+        //type            fixedValue;
+        //value           $internalField;
+        type turbulentIntensityKineticEnergyInlet; // 乱れ強さ指定
+	value $internalField; 
+	intensity 0.05; // 乱れ強さI=5%
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    sideWall
+    {
+        type	          kqRWallFunction; // 壁関数(zeroGradient 法線方向勾配0)
+        value             $internalField;
+    }
+    front
+    {
+	    type	wedge;
+    }
+    back
+    {
+	    type	wedge;
+    }
+}
+
+
+// ************************************************************************* //
