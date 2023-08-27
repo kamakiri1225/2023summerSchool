@@ -1,0 +1,119 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2206                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     simpleFoam;
+
+startFrom       startTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         1000;
+
+deltaT          1;
+
+writeControl    timeStep;
+
+writeInterval   100;
+
+purgeWrite      2;
+
+writeFormat     binary;
+
+writePrecision  6;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+functions
+{
+    // #includeFunc streamlines
+    // #include sampleDict
+    //#includeFunc solverInfo
+    continuityError1
+    {
+        type continuityError;
+        libs
+        (
+            fieldFunctionObjects
+        ); 	// Mandatory entries (unmodifiable)// Optional entries (runtime modifiable)
+        phi phi; 	// Optional (inherited) entries
+        writePrecision 8;
+        writeToFile yes;
+        useUserTime yes;
+        region region0;
+        enabled yes;
+        log yes;
+        timeStart 0;
+        timeEnd 6000;
+        executeControl timeStep;
+        executeInterval 1;
+        writeControl timeStep;
+        writeInterval 50;
+    }
+    inlet
+    {
+        type surfaceFieldValue;
+        libs
+        (
+            "libfieldFunctionObjects.so"
+        );
+        writeControl timeStep;
+        log yes;
+        writeFields no;
+        regionType patch;
+        name      inlet;
+        operation sum;
+        fields
+        (
+            phi
+        ); 	// Optional (inherited) entries
+        writePrecision 8;
+        writeToFile yes;
+        useUserTime yes;
+        region region0;
+        enabled yes;
+        timeStart 0;
+        timeEnd 8000;
+        executeControl timeStep;
+        executeInterval 1;
+        writeInterval 100;
+    }
+
+    outlet
+    {
+        $inlet;
+        name outlet;
+    }
+    residuals
+    {
+        type solverInfo;
+        //libs("libutilityFunctionObjects.so");
+        libs (utilityFunctionObjects);
+        fields (".*" );
+    }
+    #includeFunc yPlus;
+}
+
+
+
+// ************************************************************************* //
