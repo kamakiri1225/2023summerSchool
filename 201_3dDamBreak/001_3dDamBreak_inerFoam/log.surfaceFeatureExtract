@@ -1,0 +1,86 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2112                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _6e1fca0e-20220610 OPENFOAM=2112 patch=220610 version=2112
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : Oct 09 2022
+Time   : 21:00:41
+Host   : DESKTOP-CT961AV
+PID    : 21346
+I/O    : uncollated
+Case   : /mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : walls_mm_tr.stl
+Output       : walls_mm_tr
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 12 in 1 region(s)
+Vertices     : 8
+Bounding Box : (0.6635 -0.2015 0) (0.8245 0.2015 0.161)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 8
+    edges  : 12
+    of which
+        region edges   : 0
+        external edges : 12
+        internal edges : 0
+
+Final Feature set:
+    points : 8
+    of which
+        convex             : 8
+        concave            : 0
+        mixed              : 0
+        non-feature        : 0
+    edges  : 12
+    of which
+        external edges     : 12
+        internal edges     : 0
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr"
+Writing 8 convex feature points to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr_convexFeaturePts.obj"
+Writing 0 concave feature points to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr_concaveFeaturePts.obj"
+Writing 0 mixed feature points to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr_mixedFeaturePts.obj"
+Writing 0 mixed feature point structure to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr_mixedFeaturePtsStructure.obj"
+Writing 12 external edges to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr_externalEdges.obj"
+Writing 0 internal edges to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr_internalEdges.obj"
+Writing 0 flat edges to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr_flatEdges.obj"
+Writing 0 open edges to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr_openEdges.obj"
+Writing 0 multiple edges to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr_multipleEdges.obj"
+Writing 0 region edges to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr_regionEdges.obj"
+Writing 12 edge directions to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/extendedFeatureEdgeMesh/walls_mm_tr_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam/constant/triSurface/walls_mm_tr.eMesh"
+ExecutionTime = 0.07 s  ClockTime = 0 s
+
+End
+

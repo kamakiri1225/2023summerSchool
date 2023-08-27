@@ -1,0 +1,11 @@
+Using:
+  case     : /mnt/c/Users/81801/Desktop/virtualbox_share2021/20220828_OpenCAE_summer_school/過去資料/2022/data/Track3/001_3Ddam_interFoam
+  log      : log.interFoam
+  database : /usr/lib/openfoam/openfoam2112/bin/tools/foamLog.db
+  awk file : logs/foamLog.awk
+  files to : logs
+
+Executing: awk -f logs/foamLog.awk log.interFoam
+
+Generated XY files for:
+End
