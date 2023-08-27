@@ -1,0 +1,52 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2206                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _8993af73-20221106 OPENFOAM=2206 patch=221104 version=2206
+Arch   : "LSB;label=32;scalar=64"
+Exec   : postProcess -latestTime -func sample
+Date   : Jun 11 2023
+Time   : 23:06:16
+Host   : dexcs-VirtualBox
+PID    : 2381
+I/O    : uncollated
+Case   : /home/dexcs/Desktop/run/102_Ahmed-body/001_sample
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 1000
+
+Sampled set:
+    x-243 -> raw
+    x-223 -> raw
+    x-203 -> raw
+    x-183 -> raw
+    x-163 -> raw
+    x-143 -> raw
+    x-123 -> raw
+    x-103 -> raw
+    x-83 -> raw
+    x-63 -> raw
+    x-43 -> raw
+    x-23 -> raw
+    x-3 -> raw
+    x+37 -> raw
+    x+87 -> raw
+
+Time = 1000
+
+Reading fields:
+    volVectorField: U
+
+Executing functionObjects
+
+End
+
