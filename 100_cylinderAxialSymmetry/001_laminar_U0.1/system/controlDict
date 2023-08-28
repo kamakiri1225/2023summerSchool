@@ -46,30 +46,10 @@ runTimeModifiable true;
 
 functions
 {
-    // #includeFunc streamlines
-    // #include sampleDict
-    //#includeFunc solverInfo
-    continuityError1
-    {
-        type continuityError;
-        libs
-        (
-            fieldFunctionObjects
-        ); 	// Mandatory entries (unmodifiable)// Optional entries (runtime modifiable)
-        phi phi; 	// Optional (inherited) entries
-        writePrecision 8;
-        writeToFile yes;
-        useUserTime yes;
-        region region0;
-        enabled yes;
-        log yes;
-        timeStart 0;
-        timeEnd 6000;
-        executeControl timeStep;
-        executeInterval 1;
-        writeControl timeStep;
-        writeInterval 50;
-    }
+    #include continuityError
+    #includeFunc residuals
+    #includeFunc yPlus;
+    
     inlet
     {
         type surfaceFieldValue;
@@ -104,14 +84,6 @@ functions
         $inlet;
         name outlet;
     }
-    residuals
-    {
-        type solverInfo;
-        //libs("libutilityFunctionObjects.so");
-        libs (utilityFunctionObjects);
-        fields (".*" );
-    }
-    #includeFunc yPlus;
 }
 
 
