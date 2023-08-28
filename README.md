@@ -9,6 +9,7 @@ OpenFOAMの結果と理論値・実験データとの比較を行うためのモ
 - 201_3dDamBreak
 - 202_shockTube
 - 203_sloshingTank
+- 300_AdvectionEq
 
-OpenFOAM v2012
+OpenFOAM v2206
 gnuplot 5.4
