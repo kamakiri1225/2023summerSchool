@@ -3,7 +3,6 @@ cd "${0%/*}" || exit                                # Run from this directory
 . ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
 #------------------------------------------------------------------------------
 
-./Allrun_solv
-./Allrun_mesh
-./Allrun_plot
+runApplication $(getApplication)
+runApplication postProcess -func sampleDict -noFunctionObjects -latestTime 
 #------------------------------------------------------------------------------

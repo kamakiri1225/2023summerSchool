@@ -3,7 +3,5 @@ cd "${0%/*}" || exit                                # Run from this directory
 . ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
 #------------------------------------------------------------------------------
 
-./Allrun_solv
-./Allrun_mesh
-./Allrun_plot
+gnuplot gnuplot/004_plotUpng.gp
 #------------------------------------------------------------------------------
