@@ -1,0 +1,20 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Version:  v2006
+    \\  /    A nd           | Website:  www.openfoam.com
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Writes out values of fields from cells nearest to specified locations.
+
+\*---------------------------------------------------------------------------*/
+	//#includeFunc solverInfo(U,p,alpha.water);
+residuals
+{   
+	type            solverInfo;
+        //libs("libutilityFunctionObjects.so");
+        libs (utilityFunctionObjects);
+	fields          (.*);
+}
+// ************************************************************************* //
