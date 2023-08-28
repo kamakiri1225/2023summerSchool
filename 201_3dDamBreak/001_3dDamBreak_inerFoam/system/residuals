@@ -9,12 +9,10 @@ Description
     Writes out values of fields from cells nearest to specified locations.
 
 \*---------------------------------------------------------------------------*/
-	//#includeFunc solverInfo(U,p,alpha.water);
 residuals
 {   
 	type            solverInfo;
-        //libs("libutilityFunctionObjects.so");
-        libs (utilityFunctionObjects);
-	fields          (U,p,alpha.water);
+  libs            (utilityFunctionObjects);
+	fields          (".*");
 }
 // ************************************************************************* //
