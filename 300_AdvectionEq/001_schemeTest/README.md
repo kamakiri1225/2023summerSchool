@@ -153,13 +153,13 @@ if (__name__ == "__main__"):# このファイルがmainファイルである場�
     scheme_list = open_SchemeList()
     # print(f'スキームの数 : {len(scheme_list)}')
 
-    # # 計算実行
-    # for i, scheme in enumerate(scheme_list):
-    #     print(f'{i+1} ======== {scheme} =========')
-    #     newCase = clone_file(orgCase, resultDir)   # 関数を実行する
-    #     new_parameter(scheme, newCase)             # スキームを入れ替える
-    #     Allrun(newCase)                            # 計算を実行
-    #     graph(scheme, newCase, resultDir)          # グラフ化
+    # 計算実行
+    for i, scheme in enumerate(scheme_list):
+        print(f'{i+1} ======== {scheme} =========')
+        newCase = clone_file(orgCase, resultDir)   # 関数を実行する
+        new_parameter(scheme, newCase)             # スキームを入れ替える
+        Allrun(newCase)                            # 計算を実行
+        graph(scheme, newCase, resultDir)          # グラフ化
         
     # 全てのグラフをまとめる
     Allgraph_png(scheme_list)
