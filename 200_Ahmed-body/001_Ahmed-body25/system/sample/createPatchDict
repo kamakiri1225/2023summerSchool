@@ -1,0 +1,122 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2206                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createPatchDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Do a synchronisation of coupled points after creation of any patches.
+// Note: this does not work with points that are on multiple coupled patches
+//       with transformations (i.e. cyclics).
+pointSync false;
+
+// Patches to create.
+patches
+(
+    {
+        // Name of new patch
+        name inlet;
+
+        patchInfo
+        {
+            type patch;
+        }
+
+        // How to construct: either from 'patches' or 'set'
+        constructFrom patches;
+
+        // If constructFrom = patches : names of patches. Wildcards allowed.
+        patches (minX);
+
+        // If constructFrom = set : name of faceSet
+        set f0;
+    }
+
+    {
+        // Name of new patch
+        name outlet;
+
+        patchInfo
+        {
+            type patch;
+        }
+
+        constructFrom patches;
+
+        patches (maxX);
+
+    }
+/*
+    {
+        // Name of new patch
+        name symmetry;
+
+        patchInfo
+        {
+            type symmetry;
+        }
+
+        constructFrom patches;
+
+        patches (minY);
+
+    }
+*/
+    {
+        // Name of new patch
+        name side;
+
+        patchInfo
+        {
+            type patch;
+        }
+
+        constructFrom patches;
+
+        patches (maxY minY);
+
+    }
+
+    {
+        // Name of new patch
+        name ground;
+
+        patchInfo
+        {
+            //type patch;
+            type wall;
+        }
+
+        constructFrom patches;
+
+        patches (minZ);
+
+    }
+
+    {
+        // Name of new patch
+        name top;
+
+        patchInfo
+        {
+            type patch;
+        }
+
+        constructFrom patches;
+
+        patches (maxZ);
+
+    }
+);
+
+
+// ************************************************************************* //
