@@ -10,7 +10,7 @@ $$\frac{\partial T}{\partial t}+u\frac{\partial T}{\partial x}=0$$
 2. [【OpenFOAM】移流方程式で色々な離散化スキーム(解の振る舞いと計算時間)](https://takun-physics.net/15492/)
 
 Pythonがインストールされている環境下で以下のライブラリをインストール(pip or pip3を使う）
-```bash
+```curl
 pip install pandas
 pip install numpy
 pip install matplotlib
