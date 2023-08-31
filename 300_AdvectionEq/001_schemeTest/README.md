@@ -1,6 +1,9 @@
 # OpenFOAM-v2012_schemeTest
 
 スカラー輸送方程式の移流項スキームを変えて解の振る舞いを確認
+![1-1](https://github.com/kamakiri1225/2023summerSchool/assets/36812492/56ccbd53-3335-40de-80d3-6ca1dc926690)
+
+
 $$\frac{\partial T}{\partial t}+u\frac{\partial T}{\partial x}=0$$
 ![anim1-18-2](https://user-images.githubusercontent.com/36812492/227067590-ee98375e-6fb8-40e8-8595-57a0fbfd59e6.gif)
 ![anim18-36-3](https://user-images.githubusercontent.com/36812492/227067598-6f42a0b2-aae2-43b8-a19e-139e1f93816c.gif)
