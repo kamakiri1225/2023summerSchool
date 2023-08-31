@@ -33,6 +33,18 @@ PyFoam
 pip install -r requirements.txt
 ```
 
+main.pyは以下のようなOpenFOAMのスキームを変えて計算し、最後にアニメーション作成を作るプログラム
+
+```bash
+python main.py
+```
+もしくは
+```bash
+python3 main.py
+```
+で実行できる。
+
+
 ## アニメーション作成用のプログラム
 ```python
 from pathlib import Path
