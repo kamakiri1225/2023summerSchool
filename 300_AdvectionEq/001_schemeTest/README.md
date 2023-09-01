@@ -5,8 +5,8 @@
 
 
 $$\frac{\partial T}{\partial t}+u\frac{\partial T}{\partial x}=0$$
-![anim1-18-2](https://user-images.githubusercontent.com/36812492/227067590-ee98375e-6fb8-40e8-8595-57a0fbfd59e6.gif)
-![anim18-36-3](https://user-images.githubusercontent.com/36812492/227067598-6f42a0b2-aae2-43b8-a19e-139e1f93816c.gif)
+
+対流項（左辺第二項）の離散化スキームを変更した結果はこちら。
 
 ![anim-all](https://github.com/kamakiri1225/2023summerSchool/assets/36812492/d2c97ee4-18ac-42be-ace6-f948e0e4029e)
 
