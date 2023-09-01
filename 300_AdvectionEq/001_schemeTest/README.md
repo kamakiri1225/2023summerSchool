@@ -8,6 +8,8 @@ $$\frac{\partial T}{\partial t}+u\frac{\partial T}{\partial x}=0$$
 
 対流項（左辺第二項）の離散化スキームを変更した結果はこちら。
 
+$u$は一定値の場合は、初期状態を保ったまま速度方向へ進行するのが厳密解である。
+
 ![anim-all](https://github.com/kamakiri1225/2023summerSchool/assets/36812492/d2c97ee4-18ac-42be-ace6-f948e0e4029e)
 
 
