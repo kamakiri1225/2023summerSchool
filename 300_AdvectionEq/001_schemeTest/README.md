@@ -206,3 +206,7 @@ if (__name__ == "__main__"):# このファイルがmainファイルである場�
     Allgraph_png(scheme_list)
     AllAnimation(scheme_list)
 ```
+
+公式サイトでのスキーム比較
+[Divergence scheme example](https://www.openfoam.com/documentation/guides/latest/doc/guide-schemes-divergence-example.html)
+[Gradient scheme example](openfoam.com/documentation/guides/latest/doc/guide-schemes-gradient-example.html)
