@@ -1,0 +1,14 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+
+runApplication setFields
+
+runApplication $(getApplication) # single
+#runApplication decomposePar
+#runParallel $(getApplication) # mpi parallel
+#reconstructPar
+
+runApplication foamLog log.$(getApplication)
+#------------------------------------------------------------------------------
