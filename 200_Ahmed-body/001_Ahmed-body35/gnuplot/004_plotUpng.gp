@@ -61,6 +61,7 @@ plot \
      "postProcessing/sampleDict/1000/x+87_U.xy" using (0.087+Ux($4)):3 with line ls 1 title ""
 
 set term qt
+reset
 #pause -1
 #    EOF
 
