@@ -1,0 +1,41 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Version:  v2006
+    \\  /    A nd           | Website:  www.openfoam.com
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Writes out values of fields from cells nearest to specified locations.
+
+\*---------------------------------------------------------------------------*/
+interfaceHeight
+	{
+	    type            interfaceHeight;
+	    libs            (fieldFunctionObjects);
+	    locations       (
+	    			(0.496 0 0)
+	    			(0.992 0 0)
+	    			(1.488 0 0)
+	    			(2.638 0 0)
+	    		    );
+
+	    alpha           alpha.water;
+	    liquid          true;
+	    direction       (0 0 -1);
+	    interpolationScheme    cellPoint;
+
+	    writePrecision  8;
+	    writeToFile     true;
+	    useUserTime     true;
+	    region          region0;
+	    enabled         true;
+	    log             true;
+	    timeStart       0;
+	    timeEnd         1000;
+	    executeControl  timeStep;
+	    executeInterval 1;
+	    writeControl    timeStep;
+	    writeInterval   1;
+	}
+// ************************************************************************* //
