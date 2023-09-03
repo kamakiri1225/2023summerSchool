@@ -9,7 +9,6 @@ set ylabel "rho[kg/m3]" font ",12"
 fileName="x_sec_T_p_rho_U.xy"
 timeNames=system("/bin/ls ./postProcessing/sampleDict")
 
-set yrange[0:1.2]
 do for [tn in timeNames]{
 	set title "time = ".tn
 	plot \
@@ -18,3 +17,4 @@ do for [tn in timeNames]{
 }
 unset output
 set terminal qt 0
+reset

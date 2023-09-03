@@ -10,3 +10,4 @@ set ylabel "rho[kg/m3]" font ",12"
 plot \
     "postProcessing/sampleDict/0.007/".fileName us 1:4 with line lw 2 lc rgb "red" title "OpenFOAM",\
     "../exactSolution/time0.007.csv" us 1:4 with line lw 2 lc rgb "black" title "Exact solution"
+reset
