@@ -11,3 +11,4 @@ set arrow from -0.3,0.338 to -0.222*cos(theta),0.338 nohead lc rgb "green" lw 2
 set arrow from -0.222*cos(theta),0.338 to 0.0,0.338-0.222*sin(theta) nohead lc rgb "black" lw 2
 
 plot x
+reset

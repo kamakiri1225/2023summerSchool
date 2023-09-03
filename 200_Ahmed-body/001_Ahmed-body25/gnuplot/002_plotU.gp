@@ -19,4 +19,5 @@ Ux(x)=(x/40)*r
 Z(x)=x/1000
 plot \
      "< awk -F ',' 'NR==762,NR==779 {print $3,$4}' ../expData/ahmed_25_lda.csv" using (-0.243+Ux($2)):(Z($1)) with points pt 7 lc "red"  title "Exp.",\
-     "postProcessing/sampleDict/1000/x-243_U.xy" using (-0.243+Ux($4)):3 with line ls 1 title "CFD", \
+     "postProcessing/sampleDict/1000/x-243_U.xy" using (-0.243+Ux($4)):3 with line ls 1 title "CFD"
+reset

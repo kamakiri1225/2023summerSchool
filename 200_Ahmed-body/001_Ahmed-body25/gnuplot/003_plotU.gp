@@ -51,3 +51,4 @@ plot \
      "postProcessing/sampleDict/1000/x+17_U.xy" using (0.017+Ux($4)):3 with line ls 1 title "", \
      "postProcessing/sampleDict/1000/x+37_U.xy" using (0.037+Ux($4)):3 with line ls 1 title "", \
      "postProcessing/sampleDict/1000/x+87_U.xy" using (0.087+Ux($4)):3 with line ls 1 title ""
+reset
