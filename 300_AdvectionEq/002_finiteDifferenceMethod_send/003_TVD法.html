@@ -7488,7 +7488,7 @@ u^{n+1}_{j}=u^{n}_{j}-c\Delta t\frac{\partial u}{\partial x}
 \end{align*}</p>
 <p>また、数値流束$f=cu$を用いることで以下の形にしておくと便利です。
 \begin{align*}
-u^{n+1}_{j}=u^{n}_{j}-\frac{\Delta x}{\Delta x}(f^{n}_{j+1/2}-f^{n}_{j-1/2})
+u^{n+1}_{j}=u^{n}_{j}-\frac{\Delta t}{\Delta x}(f^{n}_{j+1/2}-f^{n}_{j-1/2})
 \end{align*}</p>
 <p>$\tilde{f}^{n}_{j+1/2}$はセル表面の数値流束です。各手法は数値流束$\tilde{f}^{n}_{j+1/2}$の求め方の違いと言って良いです。</p>
 <p>ここから以下のように離散化手法の分類ができます。</p>
