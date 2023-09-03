@@ -46,4 +46,4 @@ plot "../expData/test_case_2_exp_data.csv" us 1:9 with line ls 1 title "EXP",\
 
 unset multiplot
 set term qt
-
+reset

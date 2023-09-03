@@ -17,4 +17,4 @@ plot x**7
 plot x**8
 
 unset multiplot
-
+reset
