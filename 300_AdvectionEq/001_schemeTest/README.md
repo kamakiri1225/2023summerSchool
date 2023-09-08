@@ -173,18 +173,18 @@ if (__name__ == "__main__"):# このファイルがmainファイルである場�
 - 計算実行時には、元のorgCaseからコピーして計算させていますが、ここにはメッシュ情報も含んでいます。
   今回のケースはメッシュ情報は同じなのでシンボリックリンクにしておく方が容量削減には良いです。
 
-  ```python
-  shutil.copytree(orgCase, newCase)
-  ```
-  ↓変更
+```python
+shutil.copytree(orgCase, newCase)
+```
+↓変更
   
-  ```python
-    PWD_ = os.getcwd() 
-    shutil.copytree(orgCase, newCase) #フォルダのコピー
-    shutil.rmtree(newCase /"constant/polyMesh") # メッシュ情報を削除
-    os.symlink( PWD_/Path(orgCase) / "constant/polyMesh", newCase / "constant/polyMesh") #リンボリックリンク
-  ```
+```python
+  PWD_ = os.getcwd() 
+  shutil.copytree(orgCase, newCase) #フォルダのコピー
+  shutil.rmtree(newCase /"constant/polyMesh") # メッシュ情報を削除
+  os.symlink( PWD_/Path(orgCase) / "constant/polyMesh", newCase / "constant/polyMesh") #リンボリックリンク
+```
 
-  シンボリックリンクは```ln -s リンク先から見た相対パス   リンクの名称```なので、symlink関数での1つ目の引数は絶対パスにしています。
+シンボリックリンクは```ln -s リンク先から見た相対パス   リンクの名称```なので、symlink関数での1つ目の引数は絶対パスにしています。
   
-  ちょっとしたことかもしれませんが、メッシュが大きくなると有効になります。
+ちょっとしたことかもしれませんが、メッシュが大きくなると有効になります。
