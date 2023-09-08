@@ -202,3 +202,20 @@ shutil.copytree(orgCase, newCase)  #フォルダのコピー
 シンボリックリンクのlinuxのコマンドは```ln -s リンク先から見た相対パス リンクの名称```なので、symlink関数での1つ目の引数は絶対パスにしています。
   
 ちょっとしたことかもしれませんが、メッシュが大きくなると有効になります。
+
+# 画像とアニメーションの背景が黒になる
+
+画像の背景が黒になって見にくいときは、
+
+```python
+fig.savefig('./resultDir/savefig/Allschemes.png', facecolor="white")
+```
+
+アニメーションgifファイルに対しても、
+
+```python
+ani = ArtistAnimation(fig, frames, interval=1)
+fig.patch.set_facecolor("white") #背景を白にする
+ani.save("./resultDir/savefig/anim-all.gif", writer="pillow")
+```
+とすると背景が白になります。
