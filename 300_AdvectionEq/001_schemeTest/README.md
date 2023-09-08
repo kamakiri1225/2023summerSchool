@@ -34,7 +34,7 @@ python main_new.py
 ご自身のPython環境に依存しますが、```python```ではなく```python3```で実行できる場合もあります。
 
 
-## アニメーション作成用のプログラム
+## アニメーション作成用のプログラム(main.py)
 ```python
 from pathlib import Path
 import shutil
@@ -190,6 +190,9 @@ if (__name__ == "__main__"):# このファイルがmainファイルである場�
     Allgraph_png(scheme_list)
     AllAnimation(scheme_list)
 ```
+
+# main.pyからmain_new.pyの変更点
+
 ## （補足）計算を実行させたい場合
 
  ```# 計算実行```で計算実行しています。
