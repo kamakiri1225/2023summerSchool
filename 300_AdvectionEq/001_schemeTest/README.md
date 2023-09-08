@@ -165,3 +165,9 @@ if (__name__ == "__main__"):# このファイルがmainファイルである場�
     Allgraph_png(scheme_list)
     AllAnimation(scheme_list)
 ```
+
+# 計算事項に関する注意点
+
+- ```# 計算実行```で計算実行
+-  ```shutil.copytree(orgCase, newCase)```
+- 
