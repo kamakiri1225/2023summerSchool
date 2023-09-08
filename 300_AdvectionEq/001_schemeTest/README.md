@@ -9,6 +9,31 @@ $$\frac{\partial T}{\partial t}+u\frac{\partial T}{\partial x}=0$$
 1. [【OpenFOAM】移流方程式で離散化スキームの勉強をする](https://takun-physics.net/15355/)
 2. [【OpenFOAM】移流方程式で色々な離散化スキーム(解の振る舞いと計算時間)](https://takun-physics.net/15492/)
 
+#　事前準備
+
+## 必要なライブラリをインストール
+
+```bash
+pip install PyFoam
+pip install matplotlib
+pip install numpy
+```
+```pip```ではなく```pip3```でインストールする場合もあります。
+
+## Pythonの実行
+
+```python
+python main.py
+```
+
+もしくは、メッシュ情報のシンボリックリンクで行う場合は、
+```python
+python main_new.py
+```
+
+ご自身のPython環境に依存しますが、```python```ではなく```python3```で実行できる場合もあります。
+
+
 ## アニメーション作成用のプログラム
 ```python
 from pathlib import Path
@@ -165,7 +190,6 @@ if (__name__ == "__main__"):# このファイルがmainファイルである場�
     Allgraph_png(scheme_list)
     AllAnimation(scheme_list)
 ```
-
 ## （補足）計算を実行させたい場合
 
  ```# 計算実行```で計算実行しています。
