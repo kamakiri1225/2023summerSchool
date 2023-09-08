@@ -170,12 +170,25 @@ if (__name__ == "__main__"):# このファイルがmainファイルである場�
 
 - ```# 計算実行```で計算実行しています。
 
+```python
+    # 計算実行
+    for i, scheme in enumerate(scheme_list):
+        print(f'{i+1} ======== {scheme} =========')
+        newCase = clone_file(orgCase, resultDir)   # 関数を実行する
+        new_parameter(scheme, newCase)             # スキームを入れ替える
+        Allrun(newCase)                            # 計算を実行
+        graph(scheme, newCase, resultDir)          # グラフ化
+```
+
 計算させたい場合はmain.py内のコメントアウトしている場合は、コメントアウトを外してください。
 - 計算実行時には、元のorgCaseからコピーして計算させていますが、ここにはメッシュ情報も含んでいます。
+
   今回のケースはメッシュ情報は同じなのでシンボリックリンクにしておく方が容量削減には良いです。
 
+  clone_file関数内の記述を変更することで、メッシュ情報だけをシンボリックリンクできます。
+  
 ```python
-shutil.copytree(orgCase, newCase)
+shutil.copytree(orgCase, newCase)  #フォルダのコピー
 ```
 ↓変更
   
